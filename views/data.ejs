@@ -1,0 +1,83 @@
+<!-- Patients Table -->
+<h2>Patients</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Patient ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Date of Birth</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% results.forEach(row => { %>
+      <tr>
+        <td><%= row.patient_id %></td>
+        <td><%= row.first_name %></td>
+        <td><%= row.last_name %></td>
+        <td><%= row.date_of_birth %></td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
+
+<!-- Providers Table -->
+<h2>Providers</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Provider ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Specialty</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% results.forEach(row => { %>
+      <tr>
+        <td><%= row.provider_id %></td>
+        <td><%= row.first_name %></td>
+        <td><%= row.last_name %></td>
+        <td><%= row.provider_specialty %></td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
+
+<!-- Patients By First Name -->
+<h2>Patients by First Name</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Patient ID</th>
+      <th>First Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% results.forEach(row => { %>
+      <tr>
+        <td><%= row.patient_id %></td>
+        <td><%= row.first_name %></td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
+
+<!-- Providers By Specialty (example for filtered data) -->
+<h2>Providers by Specialty</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Provider ID</th>
+      <th>Specialty</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% results.forEach(row => { %>
+      <tr>
+        <td><%= row.provider_id %></td>
+        <td><%= row.provider_specialty %></td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
